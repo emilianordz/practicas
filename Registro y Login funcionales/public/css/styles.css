@@ -5,6 +5,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, transparent, #009688);
+}
 .container {
     width: 100%;
     min-height: 100vh;
@@ -114,3 +119,50 @@ form label{
     color: #fff;
     cursor: pointer;
 }
+
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: #009688;
+    position: relative;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(4, 165, 68, 0.913);
+  }
+
+  .nav-userdata {
+    padding: 15px;
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }

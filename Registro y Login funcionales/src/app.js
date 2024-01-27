@@ -5,6 +5,7 @@ const mysql = require('mysql');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const routes = require('./routes/user');
+const sessionMiddleware = require("./middlewares/sessionMiddleware");
 
 const app = express();
 app.set('port', 4000);
@@ -31,6 +32,8 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 }));
+
+app.use(sessionMiddleware);
 
 app.listen(app.get('port'), () => {
     console.log("Servidor iniciado en puerto", app.get('port'));

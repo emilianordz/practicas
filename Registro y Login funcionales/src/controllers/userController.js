@@ -54,12 +54,19 @@ async function profile(req, res){
     } catch (error) {
       console.log(error)
     }
-  }
+}
+
+    function logout (req, res) {
+        req.session.destroy();
+        res.clearCookie("userId");
+        return res.redirect("/login");
+      }
 
 module.exports = {
     login,
     register,
     storeUser,
     auth,
-    profile
+    profile,
+    logout
 }
