@@ -181,3 +181,13 @@ form label{
   .nav > #nav-check {
     display: none;
   }
+
+  .btn {
+    padding: 5px;
+    border-radius: 4px;
+    background: #ef005d;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    display: block;
+  }

@@ -39,5 +39,9 @@ router.get('/profile', authMiddleware, sessionMiddleware, userController.profile
 router.get("/logout", userController.logout);
 router.post("/logout", userController.logout);
 
+
+router.get("/googleLog", userController.google);
+router.post("/googleLog", userController.auth);
+
 // Exporta el enrutador para que pueda ser utilizado en otros archivos
 module.exports = router;

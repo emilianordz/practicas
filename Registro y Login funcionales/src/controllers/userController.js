@@ -15,6 +15,11 @@ function register(req, res) {
     res.render('register');
 }
 
+
+function google(req, res) {
+    res.render('googleLog');
+}
+
 // Función para almacenar un nuevo usuario en la base de datos
 async function storeUser(req, res) {
      // Validacion de datos ingresados
@@ -117,6 +122,7 @@ function logout(req, res) {
 // Exporta todas las funciones
 module.exports = {
     login,
+    google,
     register,
     storeUser,
     auth,
