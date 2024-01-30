@@ -21,10 +21,16 @@
                         <form action="/login" method="post">
                             <label>Ingresa tu Usuario</label>
                             <input type="text" name="username" placeholder="Ingrese su usuario" class="input-field">
+                            <p class="error" id="error"></p>
+                            <% if (locals.errors?.username) { %>
+                                <div class = "register-error-message"><%= errors.username.msg %></div>
+                                <% } %>
 
                             <label>Escribe tu Contraseña</label>
-                            <input type="password" name="password" placeholder="Ingrese su contraseña"
-                                class="input-field">
+                            <input type="password" name="password" placeholder="Ingrese su contraseña" class="input-field">
+                            <% if (locals.errors?.password) { %>
+                                <div class = "register-error-message"><%= errors.password.msg %></div>
+                                <% } %>
 
                             <div class="row">
                                 <input type="checkbox" checked>

@@ -20,15 +20,23 @@
 
                         <form action="" method="post">
                             <label>Elija su nombre de usuario</label>
-                            <input type="text" name="username" placeholder="Escriba su nombre de usuario"
-                                class="input-field">
+                            <input type="text" name="username" placeholder="Escriba su nombre de usuario" class="input-field">
+                                <p class="error" id="error"></p>
+                            <% if (locals.errors?.username) { %>
+                                <div class = "register-error-message"><%= errors.username.msg %></div>
+                                <% } %>
 
                             <label>Registre su casilla de Mail</label>
                             <input type="email" name="email" placeholder="Ingrese su E-Mail" class="input-field">
+                            <% if (locals.errors?.email) { %>
+                                <div class = "register-error-message"><%= errors.email.msg %></div>
+                                <% } %>
 
                             <label>Cree su Contraseña</label>
-                            <input type="password" name="password" placeholder="Escriba su contraseña"
-                                class="input-field">
+                            <input type="password" name="password" placeholder="Escriba su contraseña" class="input-field">
+                            <% if (locals.errors?.password) { %>
+                                <div class = "register-error-message"><%= errors.password.msg %></div>
+                                <% } %>
 
                             <div class="row">
                                 <input type="checkbox" checked>
