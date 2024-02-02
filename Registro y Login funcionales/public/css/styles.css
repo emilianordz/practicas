@@ -8,7 +8,7 @@
 body{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(45deg, transparent, #009688);
+    background: linear-gradient(244deg, transparent, #434570);
 }
 .container {
     width: 100%;
@@ -18,6 +18,61 @@ body{
     align-items: center;
     justify-content: center;
     padding: 5%;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 45% 50%;
+  place-items: center;
+  gap: 50px;
+  background-image: url(../images/imgs.png);
+  overflow: hidden;
+  padding: 80px 80px;
+}
+
+ul.intro-social-buttons > li {
+  display: block;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+ul.intro-social-buttons > li:last-child {
+  margin-bottom: 0;
+}
+
+.description {
+  color: #fff;
+  padding: 0 50px;
+}
+
+.description > h1 {
+  font-family: "Tilt Neon", sans-serif;
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+.gradient-text, .gradient-text a {
+  font-family: "Tilt Neon", sans-serif;
+  background-image: linear-gradient(
+    90deg,
+    rgb(118, 167, 63) 0%,
+    rgb(51, 143, 118) 40%,
+    rgb(55, 141, 167) 50%,
+    rgb(117, 152, 242) 70%,
+    rgb(144, 118, 236) 100%
+  );
+  color: transparent;
+  background-size: contain;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.description > p {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
 }
 
 .signup-box{
@@ -184,6 +239,7 @@ form label{
 
   .btn {
     padding: 5px;
+    margin-bottom: 4px;
     border-radius: 4px;
     background: #ef005d;
     color: #ffffff;
@@ -191,3 +247,8 @@ form label{
     font-size: 14px;
     display: block;
   }
+  .btn:hover {
+    color: #fff;
+    background-color: rgba(4, 165, 68, 0.913)
+    }
+    

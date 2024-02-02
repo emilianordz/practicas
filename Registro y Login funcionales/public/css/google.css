@@ -46,6 +46,11 @@ button {
   box-shadow: 0 2px 10px -3px #719BE6;
   display: block;
   margin: 55px auto 10px auto;
+  cursor: pointer;
+}
+
+button:hover{
+  background: #718ce6;
 }
 
 a {
